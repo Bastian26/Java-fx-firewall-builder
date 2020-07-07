@@ -1,3 +1,9 @@
+//-----------------------------------
+//Name: Bastian Struggl
+//Projektkname: Firewall_BuilderJAVA_FX / Klasse: Model
+//Datum: 07.07.2020
+//-----------------------------------
+
 package application;
 
 public class Model {
@@ -6,7 +12,7 @@ public class Model {
 	//Hier folgen die Berechnungen
 	public String calculateIP(String richtung, String protokoll,String quelle,String ziel,String port_s,String mac,String kommentar) {
 		
-		// direction prüfen und in einen Zahlenwert umwandeln
+		// direction prÃ¼fen und in einen Zahlenwert umwandeln
 		int value1 = 0;
 		switch (richtung) {
 		case "FORWARD":	value1 = 1;
@@ -17,7 +23,7 @@ public class Model {
 	  					break;	
 		}
 		
-		// prtotocoll prüfen und in einen Zahlenwert umwandeln
+		// prtotocoll prÃ¼fen und in einen Zahlenwert umwandeln
 		int value2 = 0;
 		switch (protokoll) {
 		case "TCP":	value2 = 1;
@@ -54,7 +60,7 @@ public class Model {
 				}
 		//-------------------------------
 				
-		// Port prüfen
+		// Port prÃ¼fen
 		String srcIP = quelle += " "; 
 		String destinationIP = ziel += " "; 
 		String port  = port_s;
@@ -68,7 +74,7 @@ public class Model {
 		else if (!isMultiPort) {
 			portInput = "--dports " + portInput + " ";
 		}
-		// MAC prüfen
+		// MAC prÃ¼fen
 		boolean macEingegeben = false;
 		String macInput = "";
 		if (mac.length() > 0) {
@@ -76,10 +82,10 @@ public class Model {
 			macEingegeben = true;
 		}
 		
-		// Kommentar prüfen
+		// Kommentar prÃ¼fen
 		String comment = kommentar;
 		
-		//Rückgabe bilden (String konkatinieren)
+		//RÃ¼ckgabe bilden (String konkatinieren)
 		
 		String rueckgabe = "echo \"("+ zaehlerModel +")\" "+ comment;
 		rueckgabe += "\n"+value3 + " ";
@@ -116,7 +122,7 @@ public class Model {
 	//############################################################################################# 
 	//Normale-Methoden
 	
-	// Prüft, ob es sich um einen Multiport (true) handelt oder nicht (false)
+	// PrÃ¼ft, ob es sich um einen Multiport (true) handelt oder nicht (false)
 	public static boolean isItAMultiPort(String zuPruefenderPort) {
 	boolean kommaVorhanden = false;
 	for (int i = 0; i < zuPruefenderPort.length(); i++) {
@@ -128,9 +134,9 @@ public class Model {
 	return kommaVorhanden;
 	}
 		
-	// Hier sind die großen texte für das spätere Skript
+	// Hier sind die groÃŸen texte fÃ¼r das spÃ¤tere Skript
 	public static String getBigText1() {
-		String x1 = "\n#HIER IST DAS AUSFÜHRBARE SKRIPT FÜR IP_TABLES:\n#-----------------------------------------------------------\n#!/bin/sh\r\n" + 
+		String x1 = "\n#HIER IST DAS AUSFÃœHRBARE SKRIPT FÃœR IP_TABLES:\n#-----------------------------------------------------------\n#!/bin/sh\r\n" + 
 				"\r\n" + 
 				"IPT=\"/sbin/iptables\"\r\n" + 
 				"\r\n" + 
