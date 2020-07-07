@@ -1,3 +1,9 @@
+//-----------------------------------
+//Name: Bastian Struggl
+//Projektkname: Firewall_BuilderJAVA_FX / Klasse: Controller
+//Datum: 07.07.2020
+//-----------------------------------
+
 package application;
 
 import java.io.File;
@@ -63,8 +69,8 @@ public class Controller implements Initializable{
 		Model m = new Model();
 		
 		String ausgabe = m.calculateIP(richtungString, protokollString, quellString, destinationString, port_sString, macString, commentString);
-		// .sh-Datei wird mit createFile Methode erstellt und mit dem String befüllt, damit ist das Skript fertig und 
-		// im temporären Verzeichnis abrufbar (C:\\Users\YourUserName\AppData\Local\Temp\FirewallBuilder_IpTablesSkcript.sh)
+		// .sh-Datei wird mit createFile Methode erstellt und mit dem String befÃ¼llt, damit ist das Skript fertig und 
+		// im temporÃ¤ren Verzeichnis abrufbar (C:\\Users\YourUserName\AppData\Local\Temp\FirewallBuilder_IpTablesSkcript.sh)
 		createFile(ausgabe);
 		
 	}
@@ -84,7 +90,7 @@ public class Controller implements Initializable{
 		  }
 		  
 	}
-	// Tooltips nutzen um Infos über die Elemente anzuzeigen
+	// Tooltips nutzen um Infos Ã¼ber die Elemente anzuzeigen
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		ObservableList<String> directionList = FXCollections.observableArrayList (
@@ -112,7 +118,7 @@ public class Controller implements Initializable{
        ziel.setTooltip(tooltipZiel);
        
        final Tooltip tooltipPorts = new Tooltip();
-       tooltipPorts.setText("Geben Sie einen oder mehrere Ports an(Multiports müssen durch Komma getrennt werden wie z.B.: 80,8080)");
+       tooltipPorts.setText("Geben Sie einen oder mehrere Ports an(Multiports mÃ¼ssen durch Komma getrennt werden wie z.B.: 80,8080)");
        port_s.setTooltip(tooltipPorts);
        
        final Tooltip tooltipMac = new Tooltip();
@@ -128,11 +134,11 @@ public class Controller implements Initializable{
        resultLabel.setTooltip(tooltipTextArea);
        
        final Tooltip tooltipBtnAkt = new Tooltip();
-       tooltipBtnAkt.setText("Das Skript aktualisieren und somit mehr Regeln den IP-Tables hinzufügen");
+       tooltipBtnAkt.setText("Das Skript aktualisieren und somit mehr Regeln den IP-Tables hinzufÃ¼gen");
        btnAkt.setTooltip(tooltipBtnAkt);
        
        final Tooltip tooltipBtnSave = new Tooltip();
-       tooltipBtnSave.setText("Ihr Skript wird in eine Shell-Skript-Datei (.sh) in ihrem Temporären Verzeichnis gespeichert (C:\\Users\\YourUserName\\AppData\\Local\\Temp\\FirewallBuilder_IpTablesSkcript.sh");
+       tooltipBtnSave.setText("Ihr Skript wird in eine Shell-Skript-Datei (.sh) in ihrem TemporÃ¤ren Verzeichnis gespeichert (C:\\Users\\YourUserName\\AppData\\Local\\Temp\\FirewallBuilder_IpTablesSkcript.sh");
        btnSave.setTooltip(tooltipBtnSave);
 	}
 	
