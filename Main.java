@@ -1,3 +1,9 @@
+//-----------------------------------
+//Name: Bastian Struggl
+//Projektkname: Firewall_BuilderJAVA_FX / Klasse: Main
+//Datum: 19.06.2020
+//-----------------------------------
+
 package application;
 	
 import javafx.application.Application;
@@ -17,7 +23,7 @@ public class Main extends Application {
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Firewall-Builder für IP-Tables");
+			primaryStage.setTitle("Firewall-Builder fÃ¼r IP-Tables");
 			primaryStage.show();
 			
 		} catch(Exception e) {
